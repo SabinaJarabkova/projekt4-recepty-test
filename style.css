@@ -1,0 +1,253 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+/* MOBILE  */
+
+
+    .recepty {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* border: 2px solid red; */
+    }
+
+
+    .hlavni {
+        min-height: 200px;
+        padding: 10px;
+        flex: 1 1 100%;
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        /* border-bottom: 1px solid white; */
+        border: 1px solid white;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/salat.jpg");
+        background-size: cover;
+        background-position: center center;
+
+    }
+
+    .maly {
+        min-height: 90px;
+        padding: 10px;
+        flex: 1 1 100%;
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        /* border-bottom: 1px solid white; */
+        /* border: 1px solid white; */
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid yellow; */
+
+    }
+
+    .main-nazev {
+        font-family: 'Raleway', 'sans serif';
+        font-weight: 800;
+        color: white;
+        font-size: 28px;
+    }
+
+    .nazev {
+        font-family: 'Raleway', 'sans serif';
+        font-weight: 800;
+        color: white;
+        font-size: 18px;
+        /* border: 2px solid blue; */ 
+    }
+
+    .typ {
+        font-family: 'Source Sans Pro', 'sans serif';
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        /* border: 2px solid blue; */
+    }
+
+    .komentar {
+        font-family: 'Source Sans Pro', 'sans serif';
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        /* border: 2px solid blue; */
+    }
+
+    .dva {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/chlebicek.jpg");
+        background-size: cover;
+        background-position: center center;
+        order: 1;
+        border-bottom: 1px solid white;
+    }
+
+    .tri {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/tacos.jpg");
+        background-size: cover;
+        background-position: center center;
+        order: 3;
+        border-bottom: 1px solid white;
+    }
+
+    .ctyri {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/cizrna.jpg");
+        background-size: cover;
+        background-position: center center;
+        order: 2;
+        border-bottom: 1px solid white;
+    }
+
+    .pet {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/burger.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-color: black;
+        order: 4;
+        border-bottom: none;
+    }
+
+
+/* TABLET */
+
+@media (min-width: 460px) {
+
+    .recepty {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .hlavni {
+        min-height: 250px;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/salat.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .male {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .maly {
+        min-height: 150px;
+        flex: 1 1 50%;
+        border: 1px solid white;      
+    }
+    
+    .main-nazev {
+        font-size: 36px;
+    }
+    
+    .nazev {
+        font-size: 22px;
+    }
+    
+    .dva {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/chlebicek.jpg");
+        background-size: cover;
+    }
+    
+    .tri {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/tacos.jpg");
+        background-size: cover;
+    }
+    
+    .ctyri {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/cizrna.jpg");
+        background-size: cover;
+    }
+    
+    .pet {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/burger.jpg");
+        background-size: cover;
+    }
+}
+
+/* PC */
+
+@media (min-width: 860px) {
+
+    .hlavni {
+        min-height: 400px;
+        padding: 20px;
+        flex: 1 1 33.333%;
+        border-right: 1px solid white;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/salat.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .male {
+        flex: 2 1 66.666%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .maly {
+        min-height: 200px;
+        padding: 20px;
+        flex: 1 1 50%;
+        border-right: 1px solid white;
+    }
+    
+    .main-nazev {
+        font-size: 48px;
+    }
+    
+    .nazev {
+        font-size: 28px;
+    }
+        
+    .dva {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/chlebicek.jpg");
+        background-size: cover;
+    }
+        
+    .tri {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/tacos.jpg");
+        background-size: cover;
+    }
+        
+    .ctyri {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/cizrna.jpg");
+        background-size: cover;
+    }
+        
+    .pet {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/burger.jpg");
+        background-size: cover;
+    }
+}
